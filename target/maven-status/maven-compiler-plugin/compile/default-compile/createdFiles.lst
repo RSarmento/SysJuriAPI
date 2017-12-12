@@ -1,0 +1,4 @@
+br/com/sysjuriapi/repositories/LogRepository.class
+br/com/sysjuriapi/domains/Log.class
+br/com/sysjuriapi/controllers/LoginController.class
+br/com/sysjuriapi/controllers/LogController.class
