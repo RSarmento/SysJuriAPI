@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -62,6 +63,11 @@ public class LogController {
 //		return "log.search.tiles";
 //	}
 
-
-
+	
+	//Trying a gabiarra, instead of passing a Log object, pass a queryList to be searched
+	@RequestMapping(value="/searchBy/{queryList}", method=RequestMethod.GET, produces="application/json")
+	public List<Log> searchBy(@PathVariable("queryList") List<String> queryList) {
+		return repository.findByTerms(queryList);
+		
+	}
 }

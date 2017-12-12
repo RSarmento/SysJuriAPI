@@ -28,4 +28,8 @@
 		<put-attribute name="title" value="SysJuri API Search Log"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/log/search.jsp"></put-attribute>
 	</definition>
+	<definition name="log.searchBy.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="SysJuri API Search Log"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/log/searchBy.jsp"></put-attribute>
+	</definition>
 </tiles-definitions>
